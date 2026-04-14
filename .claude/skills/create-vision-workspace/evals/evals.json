@@ -1,0 +1,23 @@
+{
+  "skill_name": "create-vision",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/create-vision ~/GameVaults/NeonRain\n\nI want to make a noir detective game set in a city that's always raining. 2D pixel art, top-down perspective. You play as a washed-up detective who gets hired to find a missing person but slowly realizes the whole city is built on a cover-up. Heavy dialogue, branching conversations, no combat — just investigation and choices. The tone should feel like Blade Runner meets a slow-burn mystery novel. I want players to feel like they're the only person who can see through the lies, but also like maybe they're wrong about everything.",
+      "expected_output": "Creates ~/GameVaults/NeonRain/01_vision/01_VISION.md with all 8 sections filled, no interview needed since user provided enough detail. Elevator pitch captures the noir detective concept, genre says 2D top-down narrative adventure or similar, player fantasy captures 'the detective who sees through lies', emotional tone reflects Blade Runner / slow-burn mystery, MVP checklist has defaults plus game-specific items like 'dialogue branching feels meaningful'.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "/create-vision ~/Vaults/GhostGame\n\nI have this idea about a game where you play as a ghost. I think it could be really atmospheric.",
+      "expected_output": "Skill conducts a focused interview to extract specific details. Asks about the player fantasy (what does being a ghost let you do/feel?), the core concept, genre, tone, and scope. After 5-8 exchanges produces 01_VISION.md with all sections filled based on what the user reveals. Should push back on vague answers.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "/create-vision ~/Projects/EchoVault\n\nHere's everything I know about my game:\n- It's a 2D side-scrolling platformer about a musician who can rewind time using sound\n- Genre: action-platformer with puzzle elements\n- Player fantasy: being someone whose art literally reshapes reality\n- Tone: bittersweet, nostalgic, like an old music box playing in an empty house\n- Why it exists: I lost my dad last year and music is how I process grief. I want to make something that honors that.\n- What makes it distinct: the time mechanic is tied to specific songs, not a generic rewind — different songs rewind different things\n- Not a combat game, not open world, not a story that requires reading lots of text\n- MVP needs to prove: the music-rewind mechanic feels good, the emotional tone lands in the first 2 minutes",
+      "expected_output": "Skill detects that all information is already provided and skips the interview entirely. Creates the vision document immediately at ~/Projects/EchoVault/01_vision/01_VISION.md with all sections accurately reflecting the user's input. 'Why This Game Exists' should capture the personal motivation honestly. MVP checklist includes both defaults and the two game-specific items the user listed.",
+      "files": []
+    }
+  ]
+}
