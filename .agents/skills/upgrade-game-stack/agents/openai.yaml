@@ -1,0 +1,7 @@
+interface:
+  display_name: "game-stack Upgrade"
+  short_description: "Upgrade game-stack skills to the latest version from GitHub"
+  default_prompt: "Detect the game-stack install type, pull the latest version from GitHub, and report what changed."
+
+policy:
+  allow_implicit_invocation: false
