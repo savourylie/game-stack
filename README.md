@@ -28,11 +28,23 @@ $skill-installer install https://github.com/savourylie/game-stack/tree/main/.age
 $skill-installer install https://github.com/savourylie/game-stack/tree/main/.agents/skills/create-game-loop
 ```
 
+```
+$skill-installer install https://github.com/savourylie/game-stack/tree/main/.agents/skills/upgrade-game-stack
+```
+
 No `$skill-installer`? Open the SKILL.md files in `skills/` and paste their contents into your system prompt or at the start of your conversation.
 
 ---
 
 ## Skills
+
+| Skill | What it does | Usage |
+|-------|-------------|-------|
+| `/create-vision` | Creates your game's one-page vision document in Obsidian | `/create-vision <vault-path>` |
+| `/create-game-loop` | Creates the gameplay rhythm document (moment-to-moment â†’ full arc) | `/create-game-loop <vault-path>` |
+| `/upgrade-game-stack` | Pulls the latest skills from GitHub and updates your local install | `/upgrade-game-stack` |
+
+---
 
 ### `/create-vision`
 
@@ -75,6 +87,21 @@ Guides you through creating `02_design/03_GAME_LOOP.md` in your Obsidian vault â
 ```
 /create-game-loop ~/Vaults/MyGame
 ```
+
+### `/upgrade-game-stack`
+
+Pulls the latest skills from GitHub and updates your local installation. Works with both Claude Code plugin installs and direct git clones. Run this whenever new skills are added to the repo.
+
+**Usage:**
+```
+/upgrade-game-stack
+```
+
+**What it does:**
+- Detects whether you installed via the Claude Code plugin marketplace or a git clone
+- Runs `git pull` to fetch the latest skills
+- Syncs the plugin cache (for marketplace installs)
+- Reports what changed, and reminds you to restart Claude Code if needed
 
 ---
 
