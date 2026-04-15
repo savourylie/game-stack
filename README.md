@@ -24,7 +24,11 @@ A collection of Claude skills for solo game developers, built around the [GAME_P
 $skill-installer install https://github.com/savourylie/game-stack/tree/main/.agents/skills/create-vision
 ```
 
-No `$skill-installer`? Open `skills/create-vision/SKILL.md` and paste its contents into your system prompt or at the start of your conversation.
+```
+$skill-installer install https://github.com/savourylie/game-stack/tree/main/.agents/skills/create-game-loop
+```
+
+No `$skill-installer`? Open the SKILL.md files in `skills/` and paste their contents into your system prompt or at the start of your conversation.
 
 ---
 
@@ -49,6 +53,27 @@ Guides you through creating `01_vision/01_VISION.md` in your Obsidian vault — 
 **Example:**
 ```
 /create-vision ~/Vaults/MyGame
+```
+
+### `/create-game-loop`
+
+Guides you through creating `02_design/03_GAME_LOOP.md` in your Obsidian vault — defines what the player actually does, from second-to-second actions to the full-game arc.
+
+**Usage:**
+```
+/create-game-loop <path-to-obsidian-vault>
+```
+
+**What it does:**
+- Reads your vision doc (if it exists) for context
+- Interviews you to define the gameplay rhythm (or skips straight to writing if you describe everything upfront)
+- Creates `<vault>/02_design/03_GAME_LOOP.md` with all required sections filled in:
+  - Moment-to-Moment Loop, Short Loop, Long Loop
+  - Sources of Tension, Rewards
+
+**Example:**
+```
+/create-game-loop ~/Vaults/MyGame
 ```
 
 ---
