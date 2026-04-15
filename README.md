@@ -4,6 +4,25 @@ A collection of Claude skills for solo game developers, built around the [GAME_P
 
 ---
 
+## Installation
+
+### Claude Code
+
+```
+/plugin marketplace add savourylie/game-stack
+/plugin install game-stack@savourylie
+```
+
+### Codex / Claude.ai
+
+Codex doesn't auto-load plugins, but you can use any skill manually by pasting its contents into your conversation. Each skill lives in `skills/<skill-name>/SKILL.md`.
+
+1. Open `skills/create-vision/SKILL.md`
+2. Paste its contents into the system prompt or at the start of your conversation
+3. Use the skill as described below
+
+---
+
 ## Skills
 
 ### `/create-vision`
@@ -26,33 +45,6 @@ Guides you through creating `01_vision/01_VISION.md` in your Obsidian vault — 
 ```
 /create-vision ~/Vaults/MyGame
 ```
-
----
-
-## Installation
-
-### Claude Code
-
-Project-local skills in `.claude/skills/` are loaded automatically when Claude Code is running inside this directory. Clone the repo and the skills are available immediately.
-
-```bash
-git clone <this-repo> game-stack
-cd game-stack
-# Open Claude Code here — skills load automatically
-```
-
-Then invoke any skill from the Claude Code prompt:
-```
-/create-vision ~/Vaults/MyGame
-```
-
-### Codex / Claude.ai
-
-Codex doesn't auto-load project skills, but you can use the skill manually by uploading or pasting the skill file's contents into your conversation. Each skill lives in `.claude/skills/<skill-name>/SKILL.md`.
-
-1. Open `.claude/skills/create-vision/SKILL.md`
-2. Paste its contents into the system prompt or at the start of your conversation
-3. Then use the skill as described above
 
 ---
 
