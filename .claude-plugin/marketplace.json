@@ -1,21 +1,20 @@
 {
-  "name": "savourylie",
+  "name": "game-stack",
+  "description": "Game development skills for solo developers, built around the GAME_PROJECT_SYSTEM methodology",
   "owner": {
-    "name": "Calvin Ku"
-  },
-  "metadata": {
-    "description": "Game development skills for solo developers, built around the GAME_PROJECT_SYSTEM methodology",
-    "version": "1.0.0"
+    "name": "savourylie"
   },
   "plugins": [
     {
       "name": "game-stack",
       "description": "Interactive skills for building story-driven games using the GAME_PROJECT_SYSTEM methodology — vision documents, design pillars, world-building, and production planning in Obsidian.",
-      "source": "https://github.com/savourylie/game-stack",
-      "strict": false,
-      "skills": [
-        "./skills/create-vision"
-      ]
+      "source": "./",
+      "version": "1.0.0",
+      "author": {
+        "name": "savourylie"
+      },
+      "category": "development",
+      "keywords": ["game-dev", "game-design", "vision", "story-driven", "obsidian", "solo-dev", "create-vision"]
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "name": "game-stack",
+  "version": "1.0.0",
+  "description": "Game development skills for solo developers, built around the GAME_PROJECT_SYSTEM methodology — vision documents, design pillars, world-building, and production planning in Obsidian.",
+  "author": {
+    "name": "savourylie"
+  },
+  "skills": "./skills/",
+  "repository": "https://github.com/savourylie/game-stack",
+  "keywords": ["game-dev", "game-design", "vision", "story-driven", "obsidian", "solo-dev", "create-vision"]
+}

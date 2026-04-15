@@ -10,7 +10,7 @@ A collection of Claude skills for solo game developers, built around the [GAME_P
 
 ```
 /plugin marketplace add savourylie/game-stack
-/plugin install game-stack@savourylie
+/plugin install game-stack@game-stack
 ```
 
 ### Codex / Claude.ai
