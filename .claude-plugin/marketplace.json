@@ -11,7 +11,7 @@
     {
       "name": "game-stack",
       "description": "Interactive skills for building story-driven games using the GAME_PROJECT_SYSTEM methodology — vision documents, design pillars, world-building, and production planning in Obsidian.",
-      "source": "./",
+      "source": "https://github.com/savourylie/game-stack",
       "strict": false,
       "skills": [
         "./skills/create-vision"
