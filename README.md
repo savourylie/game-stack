@@ -8,9 +8,14 @@ A collection of Claude skills for solo game developers, built around the [GAME_P
 
 ### Claude Code
 
+**Step 1** — add the marketplace:
 ```
 /plugin marketplace add savourylie/game-stack
-/plugin install game-stack@game-stack
+```
+
+**Step 2** — install the plugin:
+```
+/plugin install game-stack@savourylie
 ```
 
 ### Codex / Claude.ai
