@@ -15,11 +15,11 @@ A collection of Claude skills for solo game developers, built around the [GAME_P
 
 ### Codex / Claude.ai
 
-Codex doesn't auto-load plugins, but you can use any skill manually by pasting its contents into your conversation. Each skill lives in `skills/<skill-name>/SKILL.md`.
+```
+$skill-installer install https://github.com/savourylie/game-stack/tree/main/.agents/skills/create-vision
+```
 
-1. Open `skills/create-vision/SKILL.md`
-2. Paste its contents into the system prompt or at the start of your conversation
-3. Use the skill as described below
+No `$skill-installer`? Open `skills/create-vision/SKILL.md` and paste its contents into your system prompt or at the start of your conversation.
 
 ---
 
