@@ -80,8 +80,11 @@ Guides you through creating `02_design/03_GAME_LOOP.md` in your Obsidian vault â
 - Reads your vision doc (if it exists) for context
 - Interviews you to define the gameplay rhythm (or skips straight to writing if you describe everything upfront)
 - Creates `<vault>/02_design/03_GAME_LOOP.md` with all required sections filled in:
-  - Moment-to-Moment Loop, Short Loop, Long Loop
-  - Sources of Tension, Rewards
+  - Three-Tiered Loop (primary / secondary / tertiary)
+  - Cognitive Cycle (action and feedback)
+  - Chains (value / execution / secret)
+  - Pacing (tension vs. rest)
+  - Goal Connections and Progression
 
 **Example:**
 ```

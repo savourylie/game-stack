@@ -284,36 +284,124 @@ If an idea sounds interesting but supports none of the pillars strongly, move it
 
 ### 03_GAME_LOOP.md
 
-Define what the player does repeatedly.
+Define the structural, psychological, and emotional rhythms the player experiences. Answer what the player does, why it matters, and how the game responds.
 
 Include:
 
-- moment-to-moment loop
-- short loop
-- long loop
-- fail states and tension sources
-- reward structure
+- three-tiered loop (primary, secondary, tertiary)
+- cognitive cycle (action and feedback)
+- chains (value, execution, secret)
+- pacing (tension vs. rest)
+- goal connections and progression
 
 #### Template
 
 ```md
 # Game Loop
 
-## Moment-to-Moment Loop
+## 1. The Three-Tiered Loop
 
-- Move
-- Observe
-- Interact
-- Converse
-- Solve / evade / discover
+Break the core repetitive gameplay down by exact time scale.
 
-## Short Loop
+### Primary Loop (Second-to-Second)
 
-## Long Loop
+The fundamental, split-second action the player takes.
+Examples: jumping, shooting, making a dialogue choice.
 
-## Sources of Tension
+This loop must be perfected and feel incredibly satisfying to perform before anything else is built.
 
-## Rewards
+- Action:
+- Input:
+- Intended feel:
+- How we know it feels right:
+
+### Secondary Loop (Minute-to-Minute)
+
+How primary actions string together to achieve an immediate goal or overcome an obstacle.
+Examples: finishing a level, completing a combat encounter.
+
+- Goal unit:
+- Actions combined:
+- Typical duration:
+- Completion signal:
+
+### Tertiary Loop (Hour-to-Hour)
+
+The overarching objective that keeps the player engaged across long sessions.
+Examples: saving the princess, upgrading a base, completing a story chapter.
+
+- Long-session driver:
+- Progress markers:
+- Session hook (reason to come back tomorrow):
+
+## 2. The Cognitive Cycle (Action & Feedback)
+
+How the game communicates with the player's brain to prevent confusion.
+
+### Mental Model & Action
+
+What the player thinks they need to do, and what input they provide.
+
+### System Rules
+
+How the game processes that action.
+
+### Feedback & Interpretation
+
+The specific visual, audio, or system feedback that tells the player their action worked and lets them learn from it.
+
+- Visual feedback:
+- Audio feedback:
+- System / state feedback:
+- What the player is meant to learn:
+
+## 3. Chains (Emotional & Meaningful Sequences)
+
+How repetitive actions accumulate meaning and emotional weight.
+
+### Value Chains
+
+If the player collects resources, the specific highly-desired fantasy or object they are building toward — the thing that makes picking up "junk" feel meaningful.
+
+### Execution Chains
+
+Strings of actions that raise emotional stakes as the player tries to complete them in order.
+
+### Secret Chains
+
+Hidden, systemic sequences the player can stumble onto that make them feel smart when they piece them together.
+
+## 4. Pacing: Action vs. Rest
+
+Continuous tension leads to exhaustion. Map the rhythm.
+
+### Tension Sources
+
+What actively challenges the player — combat, puzzles, narrative stakes, social pressure, time pressure.
+
+### Moments of Rest
+
+Where the player pauses, reflects on a victory or failure, breathes, and builds anticipation for the next challenge.
+Examples: bonfires, base camps, cutscenes, safe rooms.
+
+### Rhythm
+
+How tension and rest alternate across a typical session.
+
+## 5. Goal Connections and Progression
+
+### Short-Term to Long-Term Bridge
+
+How achieving an immediate goal naturally sets up the next one. At any moment there should be at least one clear goal pulling the player forward — the "one more turn" or "one more day" feeling.
+
+### Fail States
+
+What happens when the loop breaks by failure, and how the game invites the player back in.
+
+- Failure trigger:
+- Consequence:
+- Recovery path:
+- Re-engagement hook:
 ```
 
 ---

@@ -9,9 +9,17 @@ user-invocable: true
 
 ## What This Is
 
-The game loop document (`02_design/03_GAME_LOOP.md`) defines what the player actually does — second to second, session to session, and across the whole game. It's not a systems spec or a features list. It's the heartbeat of the game: the repeating actions, the tension that makes those actions matter, and the rewards that pull the player back in.
+The game loop document (`02_design/03_GAME_LOOP.md`) defines the structural, psychological, and emotional rhythms the player experiences. It answers what the player does, why it matters, and how the game responds.
 
-If the vision document says *what the game is*, the game loop says *what it feels like to play it*.
+This is not a systems spec or a features list. It's the heartbeat of the game, captured at five resolutions:
+
+1. **Three-Tiered Loop** — the player's actions at second-to-second, minute-to-minute, and hour-to-hour timescales.
+2. **Cognitive Cycle** — how the game communicates with the player's brain: mental model, system rules, feedback.
+3. **Chains** — how repeated actions accumulate meaning (value, execution, secret).
+4. **Pacing** — how tension and rest alternate.
+5. **Goal Connections & Progression** — how short-term goals bridge to long-term ones, and how the game recovers from failure.
+
+If the vision document says *what the game is*, the game loop says *what it feels like to play it, at every timescale*.
 
 Keep it concrete. If a loop can't be acted out in your head, it's too abstract.
 
@@ -31,21 +39,69 @@ If the vision document does not exist, proceed normally but mention that definin
 
 ## Step 2: Interview the User
 
-Your goal is to fill in all 5 sections of the game loop template. Do this through a natural conversation, not a form. Ask about a few things at once when they naturally connect. Listen for what the user has already answered implicitly.
+Your goal is to fill in all 5 sections of the game loop template. Do this through a natural conversation, not a form. Move through the sections in order — the primary loop constrains the secondary, which constrains the tertiary, and the rest of the document builds on the three-tiered loop. When the user has already answered something implicitly, move on without re-asking.
 
-If the user gives you everything upfront in a single message — a full description of their game's loops, tension, and rewards — skip the interview entirely and go straight to writing the file.
+If the user gives you everything upfront in a single message — a full description covering all five sections — skip the interview entirely and go straight to writing the file.
 
-**What to draw out:**
+### 1. The Three-Tiered Loop
 
-- **Moment-to-Moment Loop** — What does the player do every few seconds? This is the most granular level: move, look, interact, talk, fight, solve, hide, build — whatever the core verbs are. The methodology suggests defaults (Move, Observe, Interact, Converse, Solve/evade/discover) as a starting point for exploration-style games. Use those to prompt the user if their game leans that way, but replace them entirely with whatever fits their game. If their game is a deckbuilder, the moment-to-moment loop is drawing, playing, and resolving cards — not walking and observing. Push for the actual verbs, not genre labels.
+Break the core repetitive gameplay down by exact timescale.
 
-- **Short Loop** — What does one play session or one quest feel like as a cycle? This is the "mission-level" or "chapter-level" rhythm. Examples: receive a lead, investigate a location, confront an NPC, make a choice, see consequences. Or: enter a dungeon, explore rooms, fight a boss, collect loot, return to town. The short loop should describe a complete arc the player repeats many times throughout the game. If the user describes a one-time event, push for the repeating pattern underneath it.
+- **Primary Loop (second-to-second)** — the fundamental, split-second action the player takes. Jumping, shooting, making a dialogue choice, dragging a card, pressing a button. Push for the actual verb and input, not a genre label. Ask: *"If you recorded the player's hands for three seconds, what would I see happening?"* Capture:
+  - the action
+  - the input that performs it
+  - the intended feel (crunchy, floaty, deliberate, frantic)
+  - how we'd know it feels right (a test the user can apply)
 
-- **Long Loop** — What is the arc across the whole game? How does the player's situation change from beginning to end? This covers progression: unlocking areas, gaining abilities, building relationships, uncovering the central mystery, shifting the world state. The long loop is what gives the short loop meaning over time. If the user struggles here, ask: "If you watched someone play your game from start to finish on fast-forward, what would you see changing?"
+  Flag to the user that this loop must be perfected and feel incredibly satisfying to perform before anything else is built — everything else in the game rests on it.
 
-- **Sources of Tension** — What makes the player care? What creates stakes, pressure, or uncertainty? This is not just "enemies can kill you." Tension can come from time pressure, social consequences, moral dilemmas, resource scarcity, information gaps, fragile relationships, or the threat of losing progress. Ask for both mechanical tension (fail states, resource management, difficulty) and narrative tension (dramatic stakes, unanswered questions, characters at risk). If the user says "there are no fail states," push on what creates difficulty or friction — every game has something that resists the player.
+- **Secondary Loop (minute-to-minute)** — how primary actions string together to achieve an immediate goal or overcome an obstacle. Finishing a level, completing a combat encounter, resolving a dialogue scene, clearing a room. Capture:
+  - the goal unit (what "one unit of play" looks like)
+  - which primary actions combine
+  - typical duration
+  - the completion signal the player sees
 
-- **Rewards** — What does the player get for engaging with the loops? Cover both extrinsic rewards (items, abilities, new areas, story reveals, relationship progress) and intrinsic rewards (the satisfaction of solving something, the emotional payoff of a conversation, the pleasure of mastering a system). If the user only lists loot, ask what the *emotional* reward is. If they only describe feelings, ask what the *concrete* reward is. A good reward structure has both.
+- **Tertiary Loop (hour-to-hour)** — the overarching objective that keeps the player engaged for long sessions. Saving the princess, upgrading a base, completing a story chapter, winning a run. Capture:
+  - the long-session driver
+  - what progress markers the player accumulates
+  - the session hook — the reason to come back tomorrow
+
+If the user struggles to separate the tiers, ask: *"Which tier is the one you'd be sad to lose?"* That usually reveals the identity of the game.
+
+### 2. The Cognitive Cycle (Action & Feedback)
+
+Define how the game communicates with the player's brain to prevent confusion. Walk through the primary action specifically:
+
+- **Mental Model & Action** — what the player thinks they need to do, and the input they provide. This is the player's hypothesis about the game.
+- **System Rules** — how the game actually processes that action. Any mismatch between mental model and system rules is a design risk worth naming.
+- **Feedback & Interpretation** — the specific visual, audio, and system feedback that tells the player their action worked and lets them learn from it. Ask for all three channels separately — games get this wrong by relying on only one. Also ask: *what is the player meant to learn from this feedback?*
+
+If the user can't say what the player learns from the feedback, the loop won't improve with practice — push on this.
+
+### 3. Chains (Emotional & Meaningful Sequences)
+
+Define how repetitive actions accumulate meaning and emotional weight.
+
+- **Value Chains** — if the player collects resources, what specific highly-desired fantasy or object are they building toward? The thing that makes picking up "junk" feel meaningful. *"If I pick up a rusty nail, what great thing is it eventually part of?"*
+- **Execution Chains** — strings of actions that raise emotional stakes as the player tries to complete them in order. Combo systems, multi-step stealth, nested dialogue choices, a clean speedrun of a section.
+- **Secret Chains** — hidden, systemic sequences the player can stumble onto that make them feel smart when they piece them together. Emergent interactions, cross-system combinations, discoverable shortcuts.
+
+Not every game has all three, but most good games have at least two. If the user says "none of these apply," push gently — value chains in particular are almost always present somewhere. If a chain genuinely does not apply, record that as an explicit design decision rather than silently skipping it.
+
+### 4. Pacing: Action vs. Rest
+
+Continuous tension leads to exhaustion. Map the rhythm.
+
+- **Tension Sources** — what actively challenges the player: combat, puzzles, narrative stakes, social pressure, time pressure, resource scarcity, information gaps. Push for both mechanical tension (fail states, difficulty, resource management) and narrative tension (dramatic stakes, unanswered questions, characters at risk).
+- **Moments of Rest** — where the player pauses, reflects on a victory or failure, breathes, and builds anticipation for the next challenge. Bonfires, base camps, cutscenes, safe rooms, hub towns, dialogue breathers.
+- **Rhythm** — how tension and rest alternate over a typical session. A rough sketch is fine ("three tense encounters, then a hub visit, then a scripted narrative beat").
+
+If the user describes only tension, ask where the rest lives. If they describe only rest, ask what the player actually recovers from.
+
+### 5. Goal Connections and Progression
+
+- **Short-Term to Long-Term Bridge** — how achieving an immediate goal naturally sets up the next one. At any moment there should be at least one clear goal pulling the player forward — the "one more turn" or "one more day" feeling. Ask: *"When the player finishes one secondary-loop unit, what pulls them into the next one without them having to stop and think?"*
+- **Fail States** — what happens when the loop breaks by failure, and how the game invites the player back in. Capture the failure trigger, the consequence, the recovery path, and the re-engagement hook. If the user says "there are no fail states," push on what creates friction — every game has something that resists the player, and the game has to handle that resistance gracefully.
 
 **Tone:** Be direct. Game loops are where vagueness is most dangerous — "the player explores and has fun" is not a loop. If an answer is abstract, ask for the specific sequence of actions. If a loop sounds identical to another game's loop, ask what makes this version distinct.
 
@@ -58,43 +114,107 @@ Use this exact template structure:
 ```md
 # Game Loop
 
-## Moment-to-Moment Loop
+## 1. The Three-Tiered Loop
 
-- [Core verb 1]
-- [Core verb 2]
-- [Core verb 3]
-- [Core verb 4]
-- [Core verb 5 — add or remove items to match the game]
+### Primary Loop (Second-to-Second)
 
-## Short Loop
+[The fundamental split-second action — what the player does with their hands every few seconds.]
 
-[One paragraph or a short sequence describing the repeating session-level cycle. What does the player do from the start of a "unit of play" to its resolution?]
+- Action:
+- Input:
+- Intended feel:
+- How we know it feels right:
 
-## Long Loop
+### Secondary Loop (Minute-to-Minute)
 
-[One paragraph or a short sequence describing how the game evolves across its full arc. What changes, what accumulates, what shifts?]
+[How primary actions string together into one "unit of play" — a level, a fight, a scene.]
 
-## Sources of Tension
+- Goal unit:
+- Actions combined:
+- Typical duration:
+- Completion signal:
 
-- [Mechanical or narrative tension source]
-- [Another tension source]
-- [At least 3 items]
+### Tertiary Loop (Hour-to-Hour)
 
-## Rewards
+[The overarching objective that carries a long session — the reason to stay engaged for an hour or more.]
 
-- [Extrinsic reward]
-- [Intrinsic reward]
-- [At least 3 items covering both types]
+- Long-session driver:
+- Progress markers:
+- Session hook:
+
+## 2. The Cognitive Cycle (Action & Feedback)
+
+### Mental Model & Action
+
+[What the player thinks they need to do, and the input they provide.]
+
+### System Rules
+
+[How the game actually processes that action.]
+
+### Feedback & Interpretation
+
+- Visual feedback:
+- Audio feedback:
+- System / state feedback:
+- What the player is meant to learn:
+
+## 3. Chains (Emotional & Meaningful Sequences)
+
+### Value Chains
+
+[What "junk" resources are building toward — the fantasy that makes pickup feel meaningful. If not applicable, state that explicitly and why.]
+
+### Execution Chains
+
+[Sequences of actions that raise emotional stakes as the player tries to complete them in order.]
+
+### Secret Chains
+
+[Hidden, systemic sequences the player can stumble onto that make them feel smart when they piece them together.]
+
+## 4. Pacing: Action vs. Rest
+
+### Tension Sources
+
+- [Mechanical tension source]
+- [Narrative tension source]
+- [At least 3 items total]
+
+### Moments of Rest
+
+- [Where and how the player rests]
+- [At least 2 items]
+
+### Rhythm
+
+[One short paragraph or sequence sketching how tension and rest alternate in a typical session.]
+
+## 5. Goal Connections and Progression
+
+### Short-Term to Long-Term Bridge
+
+[How one immediate goal naturally sets up the next — the "one more turn" hook.]
+
+### Fail States
+
+- Failure trigger:
+- Consequence:
+- Recovery path:
+- Re-engagement hook:
 ```
 
 **Writing rules:**
+
 - Write in plain, declarative prose — no marketing language
 - Every section must be filled; nothing blank or left as a placeholder
-- Moment-to-Moment Loop should have 3–7 concrete verbs or actions, not vague categories
-- Short Loop and Long Loop should each be 2–5 sentences or a clear sequence — enough to be useful, short enough to scan
-- Sources of Tension needs at least three items — push for both mechanical and narrative tension
-- Rewards needs at least three items — push for both extrinsic and intrinsic rewards
-- Total document length: aim for 25–50 lines. If it's longer, the loops are probably overspecified — move system details to `04_SYSTEMS.md`
-- If a vision document exists, the game loop should be consistent with it — but do not repeat information that belongs in the vision
+- The Primary Loop's action / input / feel block must name concrete verbs and inputs, not genres
+- The Cognitive Cycle's three feedback channels (visual, audio, system / state) must each have an entry — no "TBD" on feedback
+- For Chains: if a chain type genuinely does not apply to this game, write one sentence explaining why rather than deleting the section — absence is itself a design decision worth recording
+- Tension Sources needs at least three items — push for both mechanical and narrative tension
+- Moments of Rest needs at least two items
+- Fail States must have all four fields filled — trigger, consequence, recovery path, re-engagement hook
+- Total document length: aim for 80–150 lines. If it's much longer, move system-implementation details to `04_SYSTEMS.md`; if it's much shorter, the loops are probably underspecified
+- If a vision document exists, the game loop must be consistent with it — but do not repeat information that belongs in the vision
 
 After writing the file, confirm the path to the user and mention that this defines the core gameplay rhythm for all other design docs in `02_design/` (next up: `04_SYSTEMS.md`, which details the individual systems that make these loops work).
