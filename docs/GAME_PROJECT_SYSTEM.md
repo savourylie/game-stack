@@ -24,6 +24,7 @@ The project succeeds if it produces a polished vertical slice that proves:
 - the exploration and dialogue loop works
 - the art and writing direction feel coherent
 - the solo and AI workflow is sustainable
+- the slice stands alone as an external asset — shareable with playtesters, usable for marketing and funding pitches, and strong enough to anchor a wishlist campaign
 
 ---
 
@@ -55,7 +56,10 @@ Goal: prove the core exploration, dialogue, and interaction loop works in-engine
 
 ### Phase 2 — Vertical Slice
 
-Goal: build one short, representative, polished playable section.
+Goals:
+
+- internally, prove the full production loop works end-to-end on a short, representative, polished playable section
+- externally, produce a shareable artifact usable for playtester feedback, marketing material (screenshots, trailers), funding pitches (publisher, Kickstarter, grants), and Steam wishlist campaigns
 
 ### Phase 3 — Replan Based on Reality
 
@@ -793,13 +797,39 @@ Each quest should be compact and implementation-friendly.
 
 Prove the full production loop works once and validate that the core game loops are genuinely engaging. This is the most important production document — if the slice is hard to finish, the full game's scope is too large.
 
-Include:
+#### Dual Purpose
+
+The slice serves two audiences at once:
+
+- **Internal** — proves the solo + AI production loop, validates the core game loop, and locks in a creative reference point for the rest of production.
+- **External** — works as a standalone asset for early playtester feedback, marketing screenshots and trailers, funding pitches (publisher, Kickstarter, grants), and Steam page / wishlist campaigns.
+
+Design the slice for both jobs from day one. If it only works as an internal test, it is missing half its value.
+
+#### Midpoint Rule — Not the Tutorial
+
+Do not build the slice as the tutorial or the first level of the game. First levels restrict mechanics for teaching reasons, which means the player never experiences the true gameplay loop.
+
+Instead, set the slice at a **midpoint** in the game where:
+
+- the player has access to a representative subset of unlocked abilities, items, and progression
+- the core systems are running at full capacity, not training-wheels mode
+- the slice can show off what the real game feels like, not what its onboarding feels like
+
+#### "Slice of Cake" Metaphor
+
+A vertical slice is a slice of cake: narrow, but it contains every layer. The slice must sample every intended final layer of the game — final-quality art, UI, sound design, mechanics, and narrative — all visible in one short playable section. This is how the slice locks in the creative vision and becomes an exact reference point for the rest of production.
+
+#### Include
 
 - target scope and scenario (strictly contained)
+- game-timeline position (why this is a midpoint, not a tutorial)
+- feature balance (60% genre standards / 40% innovations)
 - loop and chain validation (what this slice tests in `03_GAME_LOOP.md`)
 - required implementation (systems, content, out-of-scope)
+- layer coverage ("slice of cake" — final-quality art, UI, sound, mechanics, narrative)
 - workflow and pipeline proof
-- acceptance criteria
+- acceptance criteria (internal proof + external asset)
 
 #### Recommended Scope
 
@@ -809,6 +839,9 @@ Include:
 - 1 main objective
 - 1 memorable tension event
 - 1 story reveal
+- midpoint in the game's progression — not the tutorial or first level
+- roughly 60% genre standards / 40% innovations in the feature mix
+- every final game layer represented at shipping fidelity within this window
 
 #### Template
 
@@ -822,6 +855,25 @@ Keep strictly contained. Do not expand beyond these limits for the slice.
 - Exact Duration: (target 15–30 minutes)
 - Location: (e.g., 1 explorable district or street cluster)
 - Characters: (e.g., 2–3 NPCs with meaningful dialogue)
+
+### Game-Timeline Position
+
+This must be a **mid-game** slice, not a tutorial or first level.
+
+- Where in the game this slice sits:
+- What the player has already unlocked by this point (abilities, items, relationships, story beats):
+- Why this moment is representative of the true core loop rather than onboarding:
+
+### Feature Balance (60/40 target)
+
+Aim for roughly 60% genre standards and 40% innovations. Genre standards prove competence; innovations prove why your game deserves attention.
+
+- Genre Standards included (what players expect from this type of game):
+  - 
+  - 
+- Innovations included (your game's unique hooks):
+  - 
+  - 
 
 ### Narrative & Progression
 
@@ -874,7 +926,19 @@ Features explicitly NOT allowed in this slice — for example large talent trees
 - 
 - 
 
-## 4. Workflow & Pipeline Proof
+## 4. Layer Coverage ("Slice of Cake")
+
+The slice must sample every intended final layer of the game. Placeholder anything-essential means the slice cannot serve as a creative reference for the rest of production. Each layer below must reach shipping fidelity within this window.
+
+- [ ] **Final-quality art** — at least one hero background, character, or key prop rendered at shipping fidelity
+- [ ] **Final-quality UI** — HUD, menus, and dialogue UI present at shipping fidelity for this slice
+- [ ] **Final-quality sound design** — one music cue, ambience for the location, and key interaction SFX at shipping fidelity
+- [ ] **Final-quality mechanics** — core loop tuned to feel like the shipped game, not a prototype
+- [ ] **Final-quality narrative** — writing voice, tone, and pacing at shipping fidelity for this scene (not draft placeholder)
+
+Everything outside this slice can stay placeholder — but inside the slice, no layer is allowed to be missing or clearly temporary.
+
+## 5. Workflow & Pipeline Proof
 
 This slice must prove the solo development process actually works.
 
@@ -891,14 +955,25 @@ This slice must exercise the full workflow end-to-end.
 - [ ] build, test, and review loop
 - [ ] AI output → review → canonical doc path
 
-## 5. Acceptance Criteria (Definition of Done)
+## 6. Acceptance Criteria (Definition of Done)
 
-The exact state this slice must reach to be considered finished.
+The exact state this slice must reach to be considered finished. Split criteria into what makes the slice an internal production-loop proof and what makes it a usable external asset — both must be satisfied.
 
-Example: "The player can start the game, complete the main objective, experience the story reveal, and hit an 'End of Demo' screen without game-breaking bugs, with final dialogue and placeholder art."
+### Internal (Production-Loop Proof)
+
+Example: "The player can start the game, complete the main objective, experience the story reveal, and hit an 'End of Demo' screen without game-breaking bugs, with final dialogue and placeholder art outside the slice's hero layers."
 
 - 
 - 
+
+### External (Asset Role)
+
+- [ ] Plays end-to-end without game-breaking bugs for a cold player
+- [ ] At least 3 high-quality screenshots captured at shipping fidelity
+- [ ] At least one 30–60 second gameplay video captured at shipping fidelity
+- [ ] Ready to send to a curated external playtester list for structured feedback
+- [ ] Strong enough to serve as a funding pitch artifact (publisher, Kickstarter, grant application)
+- [ ] Can anchor a Steam store page and wishlist campaign
 ```
 
 ---
@@ -1644,6 +1719,10 @@ The slice should cover:
 - dialogue integration
 - event scripting
 - build / test / review loop
+- a midpoint moment of the game — not the tutorial or first level — so the real core loop is on display
+- every final layer of the game (art, UI, sound, mechanics, narrative) at shipping fidelity within the slice
+
+Build the slice to be **externally shareable from the start**, not just as a private test. It should be ready to send to playtesters, capture marketing screenshots and trailers from, pitch to publishers or funders, and anchor a Steam wishlist campaign.
 
 If the slice is hard to finish, the full game is currently too large.
 
@@ -1659,6 +1738,15 @@ Whenever a new idea appears, ask:
 4. Can it be delayed without damaging the slice?
 
 If the answer is "not really," move it to **Later**.
+
+## Feature Balance Rule
+
+When deciding what features and systems make it into the slice, aim for roughly **60% genre standards** and **40% innovations**.
+
+- **Genre standards** are the things players expect from this type of game. They prove you can build a competent entry in the genre.
+- **Innovations** are your game's unique hooks — the reason it deserves attention over the existing entries in the genre.
+
+A slice that is pure innovation feels unfamiliar and hard to read. A slice that is pure genre standards just proves you can build a worse version of a game that already exists. The 60/40 split ensures the slice actually tests the unique elements that make your game stand out while still landing on familiar ground.
 
 ## Things to Delay Aggressively
 
