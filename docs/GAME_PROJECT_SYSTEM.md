@@ -791,15 +791,14 @@ Each quest should be compact and implementation-friendly.
 
 ### 13_VERTICAL_SLICE.md
 
-This is the most important production document.
+Prove the full production loop works once and validate that the core game loops are genuinely engaging. This is the most important production document — if the slice is hard to finish, the full game's scope is too large.
 
-Define:
+Include:
 
-- exact duration target
-- one area or small chain of areas
-- one central scenario
-- required systems
-- required assets
+- target scope and scenario (strictly contained)
+- loop and chain validation (what this slice tests in `03_GAME_LOOP.md`)
+- required implementation (systems, content, out-of-scope)
+- workflow and pipeline proof
 - acceptance criteria
 
 #### Recommended Scope
@@ -816,23 +815,90 @@ Define:
 ```md
 # Vertical Slice
 
-## Purpose
+## 1. Target Scope & Scenario
 
-## Target Duration
+Keep strictly contained. Do not expand beyond these limits for the slice.
 
-## Playable Area
+- Exact Duration: (target 15–30 minutes)
+- Location: (e.g., 1 explorable district or street cluster)
+- Characters: (e.g., 2–3 NPCs with meaningful dialogue)
 
-## Main Objective
+### Narrative & Progression
 
-## Required Systems
+- 1 Main Objective:
+- 1 Memorable Tension Event:
+- 1 Story Reveal:
 
-## Required Content
+## 2. Loop & Chain Validation
 
-## Required Assets
+How this slice tests the theories defined in `03_GAME_LOOP.md`.
 
-## What This Slice Must Prove
+### Primary Loop Proof
 
-## Done Criteria
+The specific second-to-second action (movement, interaction, combat, dialogue choice) that will be perfected and polished in this slice.
+
+### Cognitive Cycle Test
+
+The most important action–feedback loop the player will experience here, and how we will prove the feedback is clear across visual, audio, and system / state channels.
+
+### Chain Demonstration
+
+The one specific Value Chain (a resource collection that resolves into a highly desired upgrade or fantasy object) or Secret Chain the player will get to complete inside this 30-minute window.
+
+### Pacing Proof
+
+Where the planned Moment of Rest sits in relation to the main Tension Event, and how that rhythm will read to the player.
+
+## 3. Required Implementation
+
+Only what is strictly necessary to make the scenario playable.
+
+### Required MVP Systems
+
+Drawn from `04_SYSTEMS.md`. Only systems needed for this specific slice.
+
+- 
+- 
+
+### Required Content & Assets
+
+Art, audio, dialogue files, scripted events.
+
+- 
+- 
+
+### Out of Scope (Delay Aggressively)
+
+Features explicitly NOT allowed in this slice — for example large talent trees, deep equipment systems, extra locations, side quests, cinematic flourishes.
+
+- 
+- 
+
+## 4. Workflow & Pipeline Proof
+
+This slice must prove the solo development process actually works.
+
+### AI Integration
+
+How AI will be used here — dialogue passes, concept art, prototype scaffolding, consistency reviews. Note which outputs will pass through human review before becoming canon.
+
+### Pipeline Checklist
+
+This slice must exercise the full workflow end-to-end.
+
+- [ ] asset naming and storage
+- [ ] dialogue integration and event scripting
+- [ ] build, test, and review loop
+- [ ] AI output → review → canonical doc path
+
+## 5. Acceptance Criteria (Definition of Done)
+
+The exact state this slice must reach to be considered finished.
+
+Example: "The player can start the game, complete the main objective, experience the story reveal, and hit an 'End of Demo' screen without game-breaking bugs, with final dialogue and placeholder art."
+
+- 
+- 
 ```
 
 ---
