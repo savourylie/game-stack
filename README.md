@@ -1,6 +1,6 @@
 # game-stack
 
-A collection of Claude skills for solo game developers, built around the [GAME_PROJECT_SYSTEM](docs/GAME_PROJECT_SYSTEM.md) methodology — a practical, AI-native workflow for turning vague game ideas into structured, finishable projects.
+A collection of Claude skills for solo game developers, built around the [GAME_PROJECT_SYSTEM](docs/GAME_PROJECT_SYSTEM.md) methodology — a practical, AI-assisted workflow for turning vague game ideas into structured, finishable projects.
 
 ---
 
@@ -110,4 +110,4 @@ Pulls the latest skills from GitHub and updates your local installation. Works w
 
 ## Reference
 
-The underlying methodology lives in [`docs/GAME_PROJECT_SYSTEM.md`](docs/GAME_PROJECT_SYSTEM.md) — a full guide covering document structure, development phases, AI pipeline rules, and solo workflow patterns for story-driven 2D games.
+The methodology starts at [`docs/GAME_PROJECT_SYSTEM.md`](docs/GAME_PROJECT_SYSTEM.md) and is split into an index, a full system guide, a canonical template reference, a solo practical mode guide, and a skill-creation guide.
