@@ -1,0 +1,23 @@
+{
+  "skill_name": "create-vertical-slice",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "/create-vertical-slice ~/GameVaults/NeonRain\n\nMy noir detective game has a vision and a game loop already. For the slice I want a 25-minute scenario where the detective interrogates a suspect at a flooded subway station. The player has the conversation system, the evidence-pinning board, and one accusation mechanic unlocked — this sits about 8 hours into the campaign, so it's not the tutorial. Standards: branching dialogue, environmental clues, rain ambience. Innovations: the rain itself is a clock that washes away clues if you stall, and the accusation locks branches permanently. Out of scope: combat, the talent tree, the apartment hub, side cases, save scumming. Slice must prove the dialogue feedback loop is readable across visual, audio, and the evidence board, and that one Value Chain (collected micro-clues becoming an Accusation) resolves inside the window. Final art for the subway and Detective Mara, final UI for the dialogue + evidence board, music cue for the interrogation, ambient rain SFX. Internal gate: a cold player can complete one full accusation path without crashes; external gate is a stretch goal — I want screenshots and a 60s video by next month.",
+      "expected_output": "Creates ~/GameVaults/NeonRain/05_production/13_VERTICAL_SLICE.md with all six top-level sections filled. No interview needed since the user provided enough detail. Target Scope captures 25 min, subway station, midpoint at 8 hours, 60/40 balance with the named standards and innovations, the three narrative beats (interrogation objective, rain-as-clock tension event, accusation reveal). Loop & Chain Validation references the dialogue cognitive cycle and the named Value Chain. Out of Scope contains the 5+ user-listed deferrals plus any obvious additions (e.g., settings menu). Layer Coverage checkboxes all have one-line plans. Acceptance Criteria splits internal (testable cold-player path) from external (screenshots/video as optional follow-on). Then offers to seed 15_TASK_BOARD.md.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "/create-vertical-slice ~/Vaults/GhostGame\n\nI have my vision and game loop done. I want to build a vertical slice but I don't really know what should be in it. Help me figure it out.",
+      "expected_output": "Skill reads 01_VISION.md and 03_GAME_LOOP.md silently, then conducts a focused interview. Asks first about scope (duration target, single location, midpoint vs tutorial — push back if user tries to make it a first level). Then walks through which loop and chain to prove, must-have systems vs out-of-scope, layer coverage commitments, and acceptance criteria (writes the internal gate first, treats external as optional). Surfaces 'fake scope' — features the user keeps mentioning that aren't actually committed. Produces 13_VERTICAL_SLICE.md with all sections filled, including at least 5 out-of-scope items and a testable internal proof gate. Then offers task board seed.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "/create-vertical-slice ~/Projects/EchoVault\n\nVision and game loop are written. For my music-rewind platformer slice I'm thinking the first level — a 10-minute tutorial section in the abandoned music hall where the player learns the rewind-by-song mechanic. Standards: tight platforming controls, environmental hazards. Innovations: the rewind is tied to specific songs. I want to ship final art for the music hall, final UI, the rewind mechanic feels good, music cue for the rewind moment. Out of scope: any other levels, the upgrade system, dialogue. Internal gate: the rewind feels good. External gate: a video for Steam.",
+      "expected_output": "Skill detects two major problems and pushes back before writing the file: (1) 10 minutes is below the 15-30 min target, suggest extending or justifying; (2) describing this as 'first level / tutorial section' violates the midpoint rule — the slice should sit at a representative midpoint, not the onboarding state. The skill suggests reframing as a midpoint scene that assumes the rewind is already learned, or explicitly notes what is assumed-unlocked. Also pushes back on 'the rewind feels good' as too vague for an internal proof gate — asks for a testable criterion (e.g., 'cold player completes 3 specific rewind puzzles without breaking the song timing'). Out-of-scope list has only 3 items, prompts the user to name more (e.g., save system, settings, branching, accessibility). After clarification, writes 13_VERTICAL_SLICE.md with the corrected midpoint framing, expanded out-of-scope list, and a sharpened internal gate. Then offers task board seed.",
+      "files": []
+    }
+  ]
+}

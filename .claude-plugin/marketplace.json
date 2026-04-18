@@ -14,7 +14,7 @@
         "name": "savourylie"
       },
       "category": "development",
-      "keywords": ["game-dev", "game-design", "vision", "story-driven", "obsidian", "solo-dev", "create-vision", "upgrade-game-stack"]
+      "keywords": ["game-dev", "game-design", "vision", "story-driven", "obsidian", "solo-dev", "create-vision", "create-game-loop", "create-vertical-slice", "upgrade-game-stack"]
     }
   ]
 }
